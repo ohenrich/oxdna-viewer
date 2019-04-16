@@ -1,4 +1,4 @@
-<meta charset="UTF-8">
+﻿<meta charset="UTF-8">
 <html>
 
 <head>
@@ -69,6 +69,7 @@
 		}
 
 	</style>
+    </head>
 
 <body>
 	<div class="sidenav">
@@ -83,10 +84,10 @@
 			<textarea id="BaseList" cols="25" rows="3" name="textarea" readonly> Selected Bases List </textarea>
 			<button onclick="makeSelectedBasesFile()" type="button">Download Selected Base List</button>
 			<button onclick="makeMutualTrapFile()" type="button">Make Mutual Trap File(broken!)</button>
-			Resolution: <input id="resolution" onchange="setResolution(this.value)" type="number" min="1" value="10" width="3"></input>
+			Resolution: <input id="resolution" onchange="setResolution(this.value)" type="number" min="1" value="10" width="3">
 			<button onclick="makeOutputFiles()" type="button">Download Output Files<br>(.dat and .top)</button>
 			<button onclick="controls.reset()" type="button">Reset Camera</button>
-			<input type="checkbox" id="centering" onchange="centerSystems()">Center Systems</button>
+			<input type="checkbox" id="centering" onchange="centerSystems()">Center Systems
 			<br>
 			<input type="checkbox" id="arrowToggle" onchange="toggleArrows(this)" checked>Display Arrows
 			<br>
@@ -114,7 +115,7 @@
 				<input type="radio" name="rotate" value="Z" onclick="getAxisMode()">Z Axis
 				<br>
 				Rotation angle:
-				<input type="number" value="-90" id="rotAngle" width="20px"></input>
+				<input type="number" value="-90" id="rotAngle" width="20">
 				<button onclick="rotate()">Rotate</button>
 			</fieldset>
 			<button onclick="previousConfig()"type="button" style="width: 45%; left: 0"> Prev Config</button>
@@ -125,7 +126,6 @@
 			</div>
 			<button onclick="toggleSideNav(this)"type="button" style="background-color: #acc; border: 0px;">hide</button>
 
-		</div>
 		<div class="main"> <!--all files to be loaded onload of html file-->
 			<script src="./ts/lib/three.js"></script>
 			<script src="./ts/lib/Lut.js"></script>
@@ -142,8 +142,7 @@
 			<script src="./ts/controls/SceneUtils.js"></script>
 			<!--<script src="./dist/cubes.js"></script> //for practice/simple model manipulation: cubes.js class-->
 		</div>
-	</div>
-
+        </div>
 </body>
 
 </html>
