@@ -340,7 +340,6 @@ target.addEventListener("drop", function (event) {
                 }
             }
             if (json_file) {
-                console.log("HERE");
                 //lutColsVis = true;
                 let check_box = document.getElementById("lutToggle");
                 let json_reader = new FileReader(); //read .json

@@ -311,9 +311,6 @@ class Nucleotide extends BasicElement {
             }
             let geo: THREE.Geometry | THREE.BufferGeometry = sp_Mesh.geometry;
             geo = connector_geometry;
-            if (geo instanceof THREE.CylinderGeometry) {
-                console.log(geo.parameters);
-            }
             sp_Mesh.drawMode = THREE.TrianglesDrawMode;
             sp_Mesh.updateMorphTargets();
 
